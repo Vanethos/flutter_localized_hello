@@ -8,23 +8,15 @@ class LocalizedHello extends StatelessWidget {
     return Localizations.override(
       context: context,
       delegates: [const LibLocalizationsDelegate()],
-      child: Builder(
-        builder: (secondContext) => Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            border: Border.all(
-                color: Color(0xff75eaff), style: BorderStyle.solid, width: 6.0),
-            color: Color(0xffb1ff75),
-          ),
-          padding: EdgeInsets.all(18.0),
-          child: Text(
-            LibLocalizations.of(secondContext).textGreeting,
-            style: TextStyle(
-                fontSize: 40.0,
-                fontWeight: FontWeight.bold,
-                color: Color(0xffff7a75)),
-          ),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          border: Border.all(
+              color: Color(0xff75eaff), style: BorderStyle.solid, width: 6.0),
+          color: Color(0xffb1ff75),
         ),
+        padding: EdgeInsets.all(18.0),
+        child: _GreetingText(),
       ),
     );
   }
