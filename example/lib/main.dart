@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:localized_hello/localized_hello.dart';
 
+import 'localization/app_localizations.dart';
+import 'localization/app_localizations_delegate.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -11,21 +14,26 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
+      localizationsDelegates: [
+          const AppLocalizationsDelegate(),
+        ],
+        supportedLocales: [
+          const Locale('en', 'US'),
+          const Locale('it', 'IT'),
+        ]
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(AppLocalizations.of(context).textIntroFirstPageTitle),
       ),
       body: Center(
         child: LocalizedHello(),

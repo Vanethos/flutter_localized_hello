@@ -1,0 +1,10 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2020-02-20T20:15:31.849415",
+  "textIntroFirstPageTitle": "Welcome to the App!",
+  "@textIntroFirstPageTitle": {
+    "description": "Intro",
+    "type": "text",
+    "placeholders": {}
+  }
+}

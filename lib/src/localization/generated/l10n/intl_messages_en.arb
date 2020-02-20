@@ -1,0 +1,10 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2020-02-20T20:11:48.741820",
+  "textGreeting": "Good Morning!",
+  "@textGreeting": {
+    "description": "Greeting",
+    "type": "text",
+    "placeholders": {}
+  }
+}
