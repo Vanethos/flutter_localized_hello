@@ -16,7 +16,10 @@ dependencies:
     path: ../
 
   intl_translation: ^0.17.9
-  intl: ^0.16.1
+  intl: ^0.16.0
+
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:

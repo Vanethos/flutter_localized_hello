@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:localized_hello/localized_hello.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'localization/app_localizations.dart';
 import 'localization/app_localizations_delegate.dart';
@@ -16,12 +17,14 @@ class MyApp extends StatelessWidget {
       ),
       home: MyHomePage(),
       localizationsDelegates: [
-          const AppLocalizationsDelegate(),
-        ],
-        supportedLocales: [
-          const Locale('en', 'US'),
-          const Locale('it', 'IT'),
-        ]
+        const AppLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', 'US'),
+        const Locale('pt', 'PT'),
+        const Locale('it', 'IT'),
+      ]
     );
   }
 }

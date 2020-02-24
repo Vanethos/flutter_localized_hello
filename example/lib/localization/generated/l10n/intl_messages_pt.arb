@@ -1,0 +1,9 @@
+{
+  "@@locale": "pt",
+  "textIntroFirstPageTitle": "Bem-vindo à App!",
+  "@textIntroFirstPageTitle": {
+    "description": "Intro",
+    "type": "text",
+    "placeholders": {}
+  }
+}

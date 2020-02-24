@@ -8,6 +8,7 @@ class LocalizedHello extends StatelessWidget {
     return Localizations.override(
       context: context,
       delegates: [const LibLocalizationsDelegate()],
+      locale: Localizations.localeOf(context),
       child: Builder(
         builder: (secondContext) => Container(
           decoration: BoxDecoration(
