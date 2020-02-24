@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:localized_hello/src/localization/lib_localizations.dart';
 import 'package:localized_hello/src/localization/lib_localizations_delegate.dart';
+import 'dart:ui' as ui;
 
 class LocalizedHello extends StatelessWidget {
   @override
@@ -8,7 +9,7 @@ class LocalizedHello extends StatelessWidget {
     return Localizations.override(
       context: context,
       delegates: [const LibLocalizationsDelegate()],
-      locale: Localizations.localeOf(context),
+      locale: Locale(ui.window.locale.languageCode, ui.window.locale.countryCode),
       child: Builder(
         builder: (secondContext) => Container(
           decoration: BoxDecoration(
